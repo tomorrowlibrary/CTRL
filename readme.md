@@ -54,7 +54,7 @@ $$
 or in otherwords
 
 $$
-\text{Edge} \approx \underbrace{\mathbb{E}[\text{R_{+}} \mid \text{fture and current state}]}_{\text{gap you capture}}  
+\text{Edge} \approx \underbrace{\mathbb{E}[\text{R} \mid \text{fture and current state}]}_{\text{gap you capture}}  
 $$
 
 This in its essence is the generalisation of "buy low sell high" or "sell high buyback low" or "prices arent matching on currency pairs, buy one hedge the other". You get the idea by now...\
