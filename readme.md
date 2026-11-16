@@ -14,6 +14,24 @@ I want you all to excel, to beat me and to kill me.
 
 
 
+Data, Alpha, Risk, Inventory, Execution, (Research?)
+
+Ctrl+Alt+DefeatTheMarket
+An unofficial guide to IMC Prosperity
+
+Inspirational video.
+League like video.
+
+*Script*
+scene opens onto a geek in front of a bunch of screens with code running.
+"- Welcome dearest audience."
+Clips to the screens and does a zoom into a high speed blur, like racing a light speed through his mind into the markets.
+"- To the forefront of humanity's pursuit of existence"
+Clips to 
+"- Algorithmic trading, 
+
+
+#
 
 
 
