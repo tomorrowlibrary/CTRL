@@ -1,3 +1,36 @@
+Monkey see, monkey do.
+
+monkey hear, monkey say.
+
+monkey do, monkey learn
+
+
+should it be simple and focused
+or extensively descriptive, cultural and so on.
+
+What do I want with this guide?
+
+I want you all to excel, to beat me and to kill me.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 the design: 
@@ -22,6 +55,27 @@ sup title - "The unofficial guide to IMC's prosperity challenge."
 hero/animation/video
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Introductions 
 
