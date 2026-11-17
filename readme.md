@@ -1,3 +1,39 @@
+Top menu items - Home, Data(IMC, Misc, Real), Alpha(Finished, Research, Ideas), Risk(market, alpha, Research), Inventory(Asset, Portfolio, Research), Execution(Signal adjusted, Cost adjusted)
+
+Ctrl+Alt+DefeatTheMarket
+An unofficial guide to IMC Prosperity
+
+### Tribute (why should you listen to me and why should you choose algorithmic trading)
+*Note: I am unsure if I should make this into a little inspirational short film for the hero under the title or if I shouldn't just make it letter for the reader.
+I used to do something similar for students that didn't understand why mathematics was important*
+
+When sometime  the forefront of human endeavours, they usually mention physics, cern, AI-labs like OpenAI and Anthropic, quantum computers, fusion, space travel or even War.
+
+
+### Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Monkey see, monkey do.
 
 monkey hear, monkey say.
