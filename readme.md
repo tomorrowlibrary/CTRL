@@ -15,6 +15,7 @@ If you stopped a person on the street and asked them, "What is the greatest huma
 5. Writing and the preservation of knowledge.
 6. Big cooperative science.
 7. Moral and political experiments.
+
 And nobody would deny that these are great endeavours. Put the same question to any of the AI models available today and you will get a version of exactly the same answer. The only difference is that a human picks the one nearest and dearest to them, while the AI simply spouts the entire list.
  
 It is therefore my job, as a human and an "influencer", to convince you that my opinion is the one that matters. And in a magnificent piece of reverse psychology, I will do it with confidence, honesty and humour, and without any need to win you over, because I already know I am right. *Wink, wink.*
