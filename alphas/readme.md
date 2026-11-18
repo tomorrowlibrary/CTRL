@@ -11,3 +11,6 @@ Or, in other words:
 $$
 \text{Edge} \approx \mathbb{E}[\,\text{net return} \mid \text{what you know now}\,]
 $$
+
+In essence edge must be above 0. 
+The simple idea, everyone likes to spout is, "buy low sell high", but what that doesn't mention is how
