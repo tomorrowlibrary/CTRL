@@ -10,13 +10,14 @@
 
 If you stopped a person on the street and asked them, "What is the greatest human endeavour?", they would likely give you one of seven answers:
 
-1. Feeding everyone.
-2. Medicine and public health.
-3. Mathematics.
-4. Leaving Earth.
-5. Writing and the preservation of knowledge.
-6. Big cooperative science.
-7. Moral and political experiments.
+- Science as a method. Building a self-correcting way of knowing, from Galileo to the Standard Model and general relativity. It’s arguably the meta-endeavour that made most of the others possible.
+- Feeding everyone. Agriculture, then the Green Revolution and the Haber–Bosch process, which roughly lets the planet support billions more people than it otherwise could.
+- Medicine and public health. Germ theory, vaccines, antibiotics, sanitation. Eradicating smallpox stands out as perhaps the cleanest win our species has had.
+- Mathematics. It’s a cumulative, cross-cultural structure built over thousands of years, and it keeps turning out to describe reality with uncanny accuracy.
+- Leaving Earth. Apollo, Voyager, Hubble and JWST. These are the moments we’ve looked back at ourselves or out to the edge of the observable universe.
+- Writing and the preservation of knowledge. This runs from cuneiform to libraries to the printing press to the internet. It’s what lets the effort accumulate across generations instead of resetting.
+- Big cooperative science. CERN, the Human Genome Project and LIGO show thousands of people across rival nations working for decades on questions with no immediate payoff.
+- Moral and political experiments. The abolition of slavery, universal rights and democratic institutions. They’re messy and unfinished, but they’re attempts to expand who counts.
 
 And nobody would deny that these are great endeavours. Put the same question to any of the AI models available today and you will get a version of exactly the same answer. The only difference is that a human picks the one nearest and dearest to them, while the AI simply spouts the entire list.
 
