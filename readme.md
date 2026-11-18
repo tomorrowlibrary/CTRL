@@ -3,14 +3,16 @@ Top menu items - Home, Data(IMC, Misc, Real), Alpha(Finished, Research, Ideas), 
 Ctrl+Alt+DefeatTheMarket
 An unofficial guide to IMC Prosperity
 
-### Tribute (why should you listen to me and why should you choose algorithmic trading)
-*Note: I am unsure if I should make this into a little inspirational short film for the hero under the title or if I shouldn't just make it letter for the reader.
-I used to do something similar for students that didn't understand why mathematics was important*
 
-When sometime  the forefront of human endeavours, they usually mention physics, cern, AI-labs like OpenAI and Anthropic, quantum computers, fusion, space travel or even War.
+---
+I need to encapsulate quickly
+Why should you listen to me?
+Why should you pursue algorithmic trading?
+Why should you read any more?
 
-
-### Introduction
+1. kill your darlings
+2. It isn't about you
+3. A great teacher wants to be run through with a broadsword
 
 
 
