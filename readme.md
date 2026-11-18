@@ -3,16 +3,47 @@ Top menu items - Home, Data(IMC, Misc, Real), Alpha(Finished, Research, Ideas), 
 Ctrl+Alt+DefeatTheMarket
 An unofficial guide to IMC Prosperity
 
-
 ---
-I need to encapsulate quickly
-Why should you listen to me?
-Why should you pursue algorithmic trading?
-Why should you read any more?
+# Introduction
+ 
+If you stopped a person on the street and asked them, "What is the greatest human endeavour?", they would likely give you one of seven answers:
+ 
+1. Feeding everyone.
+2. Medicine and public health.
+3. Mathematics.
+4. Leaving Earth.
+5. Writing and the preservation of knowledge.
+6. Big cooperative science.
+7. Moral and political experiments.
+And nobody would deny that these are great endeavours. Put the same question to any of the AI models available today and you will get a version of exactly the same answer. The only difference is that a human picks the one nearest and dearest to them, while the AI simply spouts the entire list.
+ 
+It is therefore my job, as a human and an "influencer", to convince you that my opinion is the one that matters. And in a magnificent piece of reverse psychology, I will do it with confidence, honesty and humour, and without any need to win you over, because I already know I am right. *Wink, wink.*
+ 
+The greatest human endeavour is algorithmic trading. Before that it was simply trading, and before that it was bartering.
+ 
+I should address how controversial that sounds before I try to convince you. Most of us reading this are scientifically minded, and many of us will have silently yelled "CERN!", or mathematics, or relativity, or quantum mechanics. Trying to convince a scientist that a business subject is the greatest endeavour of our species may be like trying to convince a bird to breathe underwater.
+ 
+Unlike many other finance bros, I am not going to tell you that the reason is "MONEY!!!", or give you the usual "Oh my god, bro, get into algos because you'll be rich!" The truth is that I have not grown rich, and it has not been easy to reach even the meagre position I hold. I am not a successful quantitative researcher with a big-name firm paying me millions. I am a tiny enthusiast who endeavoured to build his own setup because nobody else wanted to hire him.
+ 
+My goal with this guide is to give you, the random undergrad, grad student or PhD who simply stumbled across algorithmic trading, the courage, the tools and the core reason to outpace me by next year. If one day the student beats the master and you run me through with a broadsword, I will be one happy teacher.
+ 
+The reason algorithmic trading is the greatest human endeavour is the friends we make along the way.
+ 
+Hahaha, no.
+ 
+Algorithmic trading is the epitome of human endeavour. It encompasses our reality in a simple and elegant way: the dance of supply and demand, action and reaction, good times and bad, across all of time and space.
+ 
+An asset nobody was watching spikes the day someone discovers it is a hidden gold mine. A newly launched meme coin on Pump.fun pumps and dumps like an ordinary street trick played on an unsuspecting tourist. The old, traditional assets carry on the way they always have, drifting slowly upward over the decades. Market regimes come and go, but the markets remain.
+ 
+Every tick is a decision stepping out of the darkness: a market order to buy, a hedge fund dropping its position in Microsoft.
+ 
+Algorithmic trading draws on science. It takes ideas across domains and tries to read the markets as particle streams, mean field games and fluid flow. We say we are looking for edges, but in reality we are looking for the laws that govern not only particles but all of our minds: our collective, emergent decisions about value, and how we optimise between costs, losses and rewards in systems so complex that nobody can truly wrap their head around it all.
+ 
+We are not working at the edge of mathematics and technology. We are running ahead of it. When a competitor gets the best computer system ever imagined, we somehow have to outcompete them with a laptop and a shoddy internet connection, by finding a better interpretation of the laws of trading.
+ 
+Algorithmic trading is the greatest human endeavour because it encompasses every aspect of our endeavours. It combines them, fuses them, and leaves standing only the competitively best understanding of the universe and of ourselves.
 
-1. kill your darlings
-2. It isn't about you
-3. A great teacher wants to be run through with a broadsword
+
 
 
 
