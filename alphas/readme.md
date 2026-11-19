@@ -9,7 +9,7 @@ $$
 Or, in other words:
 
 $$
-\text{Edge} \approx \mathbb{E}[\,\text{net return} \mid \text{what you know now}\,]
+\text{Edge} \approx \mathbb{E}[\text{net return} \mid \text{what you know now}\]
 $$
 
 Edge must be above zero: the idea has to make money. Everyone likes to spout "buy low, sell high", but it doesn't have to be exactly that. Three things have to hold. You predict the direction. The move is bigger than your fees. And your orders actually get filled, on the way in and on the way out. If you can predict a fall, you short instead of going long: sell high, buy low.
