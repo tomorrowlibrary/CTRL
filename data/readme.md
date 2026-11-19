@@ -1,133 +1,144 @@
-""This is where you have hopefully come, right after reading the introduction. If you went straight to alphas, you did exactly what I had expected, but hoped for you not to do. Why?
+If you came here straight after the introduction, welcome. If you skipped ahead to the alphas first, you did exactly what I expected and hoped you wouldn't. Why? Because data is your bedrock. It is the most important piece of any quant or algorithmic pipeline: you build your ideas from it, and you trade on it.
 
-Because data is your bedrock. So welcome here. Data is the most important piece of your quant or algorithmic pipeline.
-You will have to trade on it and make ideas from it.
-I understand, like any bloke, that the scientific method starts with a hypothesis. That is definitely also possible here.
-But you need to know how to find data to match your ideas than. 
+## Start with what you can trade
 
-Sadly it is mostly the reverse with trading, because we aren't truly scientifically minded, we are business minded
-and we look for what assets, opportunities and ideas we can trade, rather than look for ideas and than match with assets.
+I understand, like any bloke, that the scientific method starts with a hypothesis. You can do that here too, but then you have to go and find data that matches your idea. In trading it mostly runs the other way round. We are not truly scientists, we are business people: we look at what we *can* trade and then look for ideas in it.
 
+Here is a genuine example.
 
-Here is the genuine example.
-1. I am a small backroom trader, I have 100$ available to me, I want first and foremost to be able to trade *something* doesn't matter what.
-2. I look over the things I can trade, I find A. Equities/stocks, B. currencies like Euro to Dollar, Kroner to Euro, Yen to Rupi, than I have cryptocurrencies, Bitcoin, Ethereum, etc.
-3. Than I may look over a few conditions, A. What can my current Hardware handle, how quickly can I trade and react? B. Can I acquire data and exchange connectivity to match that Hardware limit. What trading limitations do I have? Can I only buy or only sell, can I do both? Do I have access to derivaties? Can I do leverage?
-4. What fees do I need to pay on each roundtrip, because simply buying and being forced to hold until the price increases by 2% essentially kills your trading and turns your setup into a "buy and hold long only investments" setup.
+1. I am a small backroom trader with $100. First and foremost I want to be able to trade *something*. It doesn't matter what.
+2. I look over what is on offer: equities, currencies (euro to dollar, kroner to euro, yen to rupee) and cryptocurrencies like Bitcoin and Ethereum.
+3. I check my conditions. What can my hardware handle, and how quickly can I react? Can I get data and an exchange connection to match that speed? Can I only buy, or also sell short? Do I have derivatives? Leverage?
+4. I check the fees on every round trip. If I have to wait for a 2% move before a trade even breaks even, my "trading" setup has quietly become a long-only buy-and-hold investment.
 
-All of these issues have happened to me and more. That is why I recommend looking at data first, than proposing hypothesis. If you want to do the reverse, please do feel free, but don't delude yourself that a beautiful alpha, with a magnificent sharpe on a day by day dataset for MSFT stocks, is actually profitable. It can help you understand a hypothesis you have about the markets, but in reality a beautiful idea may very well not be profitable. I have jumped into that hole many times in my life. 
+Every one of these has bitten me, and more besides. That is why I recommend looking at the data first and proposing hypotheses second. Do it the other way if you like, but don't fool yourself that a beautiful alpha with a magnificent Sharpe on daily MSFT bars is actually profitable. It can teach you something about the market. It may very well not make money. I have jumped into that hole many times.
 
+## Clean data, dirty results
 
-In reality markets are very chaotic, data available online is mostly very clean, so pulling out the data you can get online from for example yahoo finance, google or ccxt is actually genuinely clean to a point most new quants don't understand.
+The data you can pull from Yahoo Finance, Google or ccxt is clean. It is clean to a degree most new quants don't appreciate, because the market it came from is not.
 
-To add to that, many new quants also unintentionally add lookahead bias to most all of their features, hypothesis or backtests.
-Reality is often something more akin to "I get data at time T", "I must trade at time T+2", "the price jumped by P+1% in the wrong direction". After that you also have to add on trading fees, either for exchange of currencies, simple trade fee or account fees. In many cases a strategy that has a sharpe of X>3 may end up having a real sharpe of 0.5 after fees cost and slippage. 
+The second trap is lookahead bias, and nearly everyone adds it by accident: to their features, their hypotheses and their backtests. Reality looks more like this: the data arrives at time T, you can trade at T+2, and by then the price has moved 1% the wrong way. On top of that come trading fees, currency conversion and account costs. A strategy with a Sharpe above 3 in a backtest can easily come out at 0.5 once fees and slippage are in.
 
-I have played around with strategies that showed a whopping sharpe of 34, yeah that was too good to be true even when I saw it first, there was no slippage, trade fee and the strat had lookahead bias, simple strategy, but backtest on buy/sell on same bar as the signal trigger. 
+I once had a strategy with a Sharpe of 34. Yes, it was too good to be true even when I first saw it. No slippage, no fees, and it bought and sold on the same bar that triggered the signal. Here is how easy that mistake is to make. One simple signal, long or short Bitcoin depending on whether its 15-minute moving average is rising, tested on minute bars from {{data:lookahead.period}}:
 
+<!-- ctrl:figure data-lookahead | The same signal five ways. Trading on the bar that produced the signal turns a Sharpe of 1.4 into one above 100. A cost of 1 basis point per trade, a tenth of Binance's standard spot fee, turns it negative: the signal flips about {{data:lookahead.flips_per_day|int}} times a day. -->
 
+The first two rows are not a strategy. They are a bug. If your backtest looks like them, look for the line of code that lets tomorrow leak into today.
 
-For those that are looking for data to use, maybe for the IMC prosperity or for backtesting, analysis and so on, I shall share the orderbook data I have, as well as the minute-by-minute data I have got. The IMC prosperity data sets and the datasets for various other competitions will also be available here. Such that the keen observers can find similar patterns between competitions and get a leg up.
+## What the exchange actually sends
 
+May the gods be merciful to anyone working in this part of the industry. The bravery it takes to battle the raw data streams is beyond even me.
 
+Genuine market data is noisy, and "noisy" is an understatement. Messages arrive late, in bursts, and sometimes not at all. Say you send an order at time T. It reaches the exchange at T+1, it matches at T+2, the confirmation leaves at T+3, and it lands back with you, stamped as matched, at T+13. That is exaggerated, but not by as much as you'd hope. On the day below, most trade messages reached the recorder about {{data:latency.trades.p50|1}} ms after the exchange stamped them. One in a hundred took more than {{data:latency.trades.p99|int}} ms, and one in a thousand more than {{data:latency.trades.p999|int}} ms.
 
-Here are examples of data and what it would look like.""
+<!-- ctrl:figure btc-latency | Delay between the exchange's timestamp and the moment the message was received, Binance BTCUSDT, {{data:day}}. Amber bars are delays of 100 ms or more. -->
 
+Orders get posted, cancelled, partly filled, re-posted and filled again, often within the same millisecond. Some of the size you trade against was never visible: an *iceberg* order shows only a sliver of its real size and refills as it is hit. From your side of the screen, trades appear out of thin air. It is the job of the colossally brave data engineers in quant firms to clean all of this up. Trades (tick data) can usually be cleaned reasonably well. The limit order book (LOB) is the hard part.
 
-Take out some of the data, help me showcase it as a table
-with a set of graphs to showcase the data.
+## Four views of the same market
 
-Can we take the day by day for BTC, the minute by minute for BTC, the orderflow, orderbook.
-I have the minute by minute and the orderflow, orderbook here.
-I just want to be able to plot and showcase it as well with the tables to compare and the graphs to compare.
+To show you what I mean, I have to show you the data itself. Everything below is Bitcoin against Tether (BTCUSDT) on Binance, from the coarsest view to the finest.
 
+<!-- ctrl:figure data-granularity | The four datasets side by side. Lag-1 autocorrelation is how strongly one return predicts the next; at every scale it is close to zero. -->
 
+### Daily bars
 
+Most people starting out look up a chart of one of the big stocks of their time. When I started it was Microsoft, and today it is thankfully still Microsoft. In a few years it may be Anthropic or Nvidia. Believe it or not, Nvidia was a completely random choice when I started: just a company making graphics cards for gamers.
 
+Then you find out you can get CSV files of open, high, low, close and volume (OHLCV). Later came Python and [yfinance](https://github.com/ranaroussi/yfinance). God bless Ran Aroussi, he made my life ten times easier. You lot are so privileged you can't imagine scouring Google for days to find a CSV with a single year of daily OHLCV. I thought it was pirate treasure at the time. Today you can simply go:
 
-""May the gods be merciful towards anyone working in this part of the industry. 
-The fucking bravery a man or woman must have to battle the data streams, is unimaginable even to me.
-
-Now before you get another deep and meaningful explanation. Here is a link straight to the data library, so you can get your claws on a bunch of that premium freshly cooked market data.
-
-
-
-
-
-Now here is why. Genuine data coming out of the markets is noisy, actually, noisy is an understatement in that department.
-Exchanges may, swap around orders, may drop connectivity for varying lengths of timehorizons. Say you send an order to the exchange.
-you send it off at time T, it arrives at the exchange at time T+1, it matches at time T+2, the exchange sends it back to you at T+3...
-As matched at time T+13. This is an exaggerated example to explain to you that time. Is not necessarily a common phenomenon.
-
-Orders in the market may be cancelled, posted, matched, ignored, cancelled after being matched, matched out of thin air. That is called iceberg orders.
-It may be matched with nothing, you buy into nothing, that is called synthetic orders. It's like the exchange simply goes "hey we had a couple of thousand microsoft stocks laying around from yesterday, do you want them?"
-
-It is the job of the massively, collossaly brave data engineers in the quant firms, to clean this complete asshattery coming out of the exchanges.
-It can usually be cleaned up relatively well with the tick data. What I'm talking about here is the LOB data. 
-
-Now to show you what I mean, I may also have to genuinely show you the datasets.
-
-Most individuals starting out with data in mind, look up a graph of one of the big stocks in their time period.
-When I started out it was Microsoft, today it is thankfully still microsoft. But in a few years it may be Anthropic or Nvidia.
-Believe it or not, Nvidia was a completely random choice back when I started. It was still just a random ass company making graphics cards for gamers.
-
-A graph would look like this...
-<img width="490" height="416" alt="image" src="https://github.com/user-attachments/assets/8348d651-4b3a-45e7-b5e1-10dbc5123be1" />
-Right off the bat you'd get the idea that "buy and hold" was a decent enough strategy. 
-If you wanted to be cool you'd think to yourself "I can buy the dip than sell the top". And in fact that is the coolest idea WE all know of.
-"Buy low sell high", tada you reinvented trading.
-
-Now after some searching you'd either figure out that you could get .csv files with historical data, open high low close maybe volume.
-Later python and Yfinance, god bless Ran Aroussi! https://github.com/ranaroussi, made my life 10x easier. Made all of you smucks so privilegde, you can't even imagine what it is like to scour google for days and days just to find a .csv file of like 1 year worth of OHLCV data. I thought it was a fucking pirate treasure at the time. Today you can simply go 
 ```python
-
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import yfinance as yf
 
-
-## import some f-ing msft data over the last 10 years
-
-df = yf.download("msft", start="2016-01-01", end="2026-01-01")
-
-plt.plot(df["close"])
+# ten years of daily Microsoft prices
+df = yf.Ticker("MSFT").history(start="2016-01-01", end="2026-01-01")
+df["Close"].plot()
 plt.show()
-````
+```
 
-and you get a freak clean graph of just the close prices.
-Than if you get curious after that you can look at correlations between stocks by loading more in, you can look at autocorrelations of prices for each asset.
-Than you can check on simple trading strategies by just proposing buys and sells based on some random condition, like the smucks we are.
-Buy when SMA cross, sell when SMA cross. So on and so on.
+and you get a beautifully clean chart of closing prices. Here is the same view for Bitcoin, one point a day:
 
-Now if you want to go a step further, you'd ask about hour by hour data or minute by minute data, which is also quite clean, but starts to show some of that nitty gritty.
+<!-- ctrl:figure btc-daily | BTCUSDT daily close, {{data:daily.start}} to {{data:daily.end}}, built from Binance minute bars. -->
 
-Try this on for size, cryptos are lovely in that way.
+Right off the bat you'd think buy and hold is a decent strategy. If you wanted to be cool, you'd think "I can buy the dip and sell the top". That is the coolest idea we all know: buy low, sell high. Tada, you reinvented trading.
+
+<!-- ctrl:figure sample-daily | Daily bars: one row per day. -->
+
+If you get curious, you load more assets and look at correlations between them, or at the autocorrelation of each asset's returns. Then you test simple strategies with buys and sells on some arbitrary condition, like the schmucks we all are. Buy when the moving averages cross, sell when they cross back. And so on.
+
+### Minute bars
+
+Go a step further and you ask for hourly or minute-by-minute data. It is still fairly clean, but the nitty-gritty starts to show. Crypto is lovely for this, because the exchanges give it away:
+
 ```python
-
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
 import ccxt
+import matplotlib.pyplot as plt
+import pandas as pd
 
+# one day of BTC/USDT minute bars from Binance, 1,000 bars per request
+ex = ccxt.binance()
+since, end = ex.parse8601("2026-08-01T00:00:00Z"), ex.parse8601("2026-08-02T00:00:00Z")
+rows = []
+while since < end:
+    batch = ex.fetch_ohlcv("BTC/USDT", timeframe="1m", since=since, limit=1000)
+    if not batch:
+        break
+    rows += batch
+    since = batch[-1][0] + 60_000
 
-## import some crypto data, I dare you ;)
-
-- ccxt command load in btcusdt
-
-plt.plot(df["close"])
+df = pd.DataFrame(rows, columns=["time", "open", "high", "low", "close", "volume"])
+df["time"] = pd.to_datetime(df["time"], unit="ms", utc=True)
+df = df[df["time"] < pd.Timestamp(end, unit="ms", tz="UTC")].set_index("time")
+df["close"].plot()
 plt.show()
-````
+```
 
-By looking over this you should notice a larger amount of noise, than for the day by day stocks.
-Now I can't tell you how many times I've heard someone tell me "you should smooth it", statisticians with Phds have told me that. 
-I am sorry to tell you, smoothing DOES NOT WORK, I understand that it should, but lovely bubu, it doesn't work.
-Yes, there are lots of useful behaviors in the smoothing, but what most forget is this, that noise isn't random noise, it is intentional.
+<!-- ctrl:figure sample-minute | Minute bars: 1,440 rows per day. Binance adds the number of trades and the volume bought by takers. -->
 
-Now I have genuinely had a range of chats with data engineers in the markets. The amount of times they can tell me the same thing.
-Markets are noisy, we can't effectively determine "which price is the right one", that one is the genuine game of big algo firms, that in many ways is their edge.
-This is also quite revealing. 
+Even this clean file has holes. In the five-year minute history behind these charts, {{data:gaps.minutes|int}} minutes are missing across {{data:gaps.episodes}} stretches, the longest {{data:gaps.largest.0.minutes}} minutes from {{data:gaps.largest.0.start}} UTC. They were filled with the previous close and zero volume, which is a choice, and it is not the only one. Find out how your data was filled before you trust a backtest on it.
 
+### Trades
 
-""
+Below the bars sits every single trade: price, size, time, and which side was the aggressor. That last field is the *order flow*. On {{data:day}} Binance printed {{data:trades.rows|int}} BTCUSDT trades. The median trade was {{data:trades.size_quantiles_btc.p50}} BTC, a few dollars, and {{data:trades.same_timestamp_share|pct}} of trades share their timestamp with the one before. That is one aggressive order eating several resting orders, printed as many separate trades.
 
+<!-- ctrl:figure sample-trades | Trades from the Tardis.dev CSV format. timestamp is the exchange's clock; local_timestamp is when the message arrived. -->
+
+Order flow is the most honest data you can get: it is what people actually did, not what they said they would do. But be careful what you conclude from it. Buy-heavy minutes go up and sell-heavy minutes go down, which is close to a tautology. Whether the *next* minute follows is a different question:
+
+<!-- ctrl:figure btc-flow | Order flow imbalance against the same minute's return and the next minute's, {{data:flow.minutes|int}} minutes of August 2026 (700 shown). -->
+
+### The order book
+
+The order book is the list of resting buy (bid) and sell (ask) orders waiting to be hit. This file holds the best five levels on each side, snapshotted about every {{data:book.median_interval_ms|int}} ms. Bitcoin is so heavily traded that the spread was one tick ($0.01) in {{data:book.spread_one_tick_share|pct2}} of snapshots. Look at where the size sits, though: almost all of it is at the best price, and the next four levels hold crumbs.
+
+<!-- ctrl:figure btc-book | The best five levels on each side. Bars are BTC, at the same scale within each panel. -->
+
+<!-- ctrl:figure sample-book | Book snapshots, the first two of five levels. -->
+
+### From a day down to a minute
+
+Now put it together. Take one day, find its busiest minute, and zoom in:
+
+<!-- ctrl:figure btc-zoom | Hover a candle or a trade for its numbers. Trades that share a timestamp and side are drawn as one mark: a single order sweeping the book. -->
+
+In the minute from {{data:zoom.minute}} UTC, Binance printed {{data:zoom.trade_rows|int}} trades. {{data:zoom.largest_sweep.snapshot_before.t|1}} seconds into that minute, the book showed {{data:zoom.largest_sweep.snapshot_before.visible_bid_qty|2}} BTC across all five bid levels, the best bid at ${{data:zoom.largest_sweep.snapshot_before.best_bid|2}}. Before the next snapshot, {{data:zoom.largest_sweep.gap_ms|int}} ms later, a single sell order traded {{data:zoom.largest_sweep.qty}} BTC at ${{data:zoom.largest_sweep.lo|2}} to ${{data:zoom.largest_sweep.hi|2}}, in {{data:zoom.largest_sweep.prints}} separate prints. None of that size was in any snapshot. It was resting deeper than five levels, or it arrived between two pictures of the book. That is what you are up against.
+
+## On smoothing
+
+Look at the minute chart and you'll see far more noise than in the daily one. I can't tell you how many times I've been told "you should smooth it", including by statisticians with PhDs. I'm sorry to tell you, lovely bubu: smoothing does not do what you hope.
+
+It is useful for looking at a chart. But a centred moving average uses prices from the future, which is exactly the first row of the table above. A trailing one lags, so by the time it turns, the move has happened. And much of what looks like noise isn't random at all. It is the mechanics of the book: one order printed in hundreds of pieces, quotes pulled and refilled within milliseconds, liquidity you could not see. Throw it away and you throw away the part that tells you how trading actually happens.
+
+I have talked with a fair number of data engineers in the markets, and they keep telling me the same thing. Markets are noisy, and nobody can say for certain which price is the right one. Getting closer to that answer than everyone else is the real game of the big algorithmic firms, and in many ways it is their edge.
+
+## Get the data
+
+For IMC Prosperity, backtesting and analysis, I will share the order book data and the minute-by-minute data I have collected here. The Prosperity datasets and data from other competitions are here too, so the keen observers among you can find the patterns that repeat between competitions and get a leg up.
+
+<!-- ctrl:link https://tomorrowlibrary.github.io/CTRL/datasets/index.html | Prosperity historical data | Every IMC Prosperity file from four editions, profiled round by round. -->
+<!-- ctrl:link https://tomorrowlibrary.github.io/data.html | The Library's data catalogue | Datasets with sources, licences and download links. -->
+<!-- ctrl:link https://data.binance.vision/ | Binance public data | Daily and monthly files of klines and trades for every Binance market. -->
+<!-- ctrl:link https://docs.tardis.dev/downloadable-csv-files | Tardis.dev datasets | Tick-level trades and order books. The first day of every month is free. -->
+
+The trades and book snapshots on this page are the free Tardis.dev files for {{data:day}}, and the minute bars come from Binance. Every number and chart on this page is produced by `ctrl_data_showcase.py`, so you can rerun it on any other day.
