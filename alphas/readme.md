@@ -1,5 +1,3 @@
-If you went to the data page first, thank you. If you went straight for the throat, the alphas: welcome. We are about to introduce you to the wonderful world of pain.
-
 ## What an alpha is
 
 An alpha, as the introduction put it, is an idea that has been proposed, tested and has survived in the market. It survives because it has edge:
