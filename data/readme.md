@@ -1,4 +1,51 @@
-May the gods be merciful towards anyone working in this part of the industry. 
+""This is where you have hopefully come, right after reading the introduction. If you went straight to alphas, you did exactly what I had expected, but hoped for you not to do. Why?
+
+Because data is your bedrock. So welcome here. Data is the most important piece of your quant or algorithmic pipeline.
+You will have to trade on it and make ideas from it.
+I understand, like any bloke, that the scientific method starts with a hypothesis. That is definitely also possible here.
+But you need to know how to find data to match your ideas than. 
+
+Sadly it is mostly the reverse with trading, because we aren't truly scientifically minded, we are business minded
+and we look for what assets, opportunities and ideas we can trade, rather than look for ideas and than match with assets.
+
+
+Here is the genuine example.
+1. I am a small backroom trader, I have 100$ available to me, I want first and foremost to be able to trade *something* doesn't matter what.
+2. I look over the things I can trade, I find A. Equities/stocks, B. currencies like Euro to Dollar, Kroner to Euro, Yen to Rupi, than I have cryptocurrencies, Bitcoin, Ethereum, etc.
+3. Than I may look over a few conditions, A. What can my current Hardware handle, how quickly can I trade and react? B. Can I acquire data and exchange connectivity to match that Hardware limit. What trading limitations do I have? Can I only buy or only sell, can I do both? Do I have access to derivaties? Can I do leverage?
+4. What fees do I need to pay on each roundtrip, because simply buying and being forced to hold until the price increases by 2% essentially kills your trading and turns your setup into a "buy and hold long only investments" setup.
+
+All of these issues have happened to me and more. That is why I recommend looking at data first, than proposing hypothesis. If you want to do the reverse, please do feel free, but don't delude yourself that a beautiful alpha, with a magnificent sharpe on a day by day dataset for MSFT stocks, is actually profitable. It can help you understand a hypothesis you have about the markets, but in reality a beautiful idea may very well not be profitable. I have jumped into that hole many times in my life. 
+
+
+In reality markets are very chaotic, data available online is mostly very clean, so pulling out the data you can get online from for example yahoo finance, google or ccxt is actually genuinely clean to a point most new quants don't understand.
+
+To add to that, many new quants also unintentionally add lookahead bias to most all of their features, hypothesis or backtests.
+Reality is often something more akin to "I get data at time T", "I must trade at time T+2", "the price jumped by P+1% in the wrong direction". After that you also have to add on trading fees, either for exchange of currencies, simple trade fee or account fees. In many cases a strategy that has a sharpe of X>3 may end up having a real sharpe of 0.5 after fees cost and slippage. 
+
+I have played around with strategies that showed a whopping sharpe of 34, yeah that was too good to be true even when I saw it first, there was no slippage, trade fee and the strat had lookahead bias, simple strategy, but backtest on buy/sell on same bar as the signal trigger. 
+
+
+
+For those that are looking for data to use, maybe for the IMC prosperity or for backtesting, analysis and so on, I shall share the orderbook data I have, as well as the minute-by-minute data I have got. The IMC prosperity data sets and the datasets for various other competitions will also be available here. Such that the keen observers can find similar patterns between competitions and get a leg up.
+
+
+
+Here are examples of data and what it would look like.""
+
+
+Take out some of the data, help me showcase it as a table
+with a set of graphs to showcase the data.
+
+Can we take the day by day for BTC, the minute by minute for BTC, the orderflow, orderbook.
+I have the minute by minute and the orderflow, orderbook here.
+I just want to be able to plot and showcase it as well with the tables to compare and the graphs to compare.
+
+
+
+
+
+""May the gods be merciful towards anyone working in this part of the industry. 
 The fucking bravery a man or woman must have to battle the data streams, is unimaginable even to me.
 
 Now before you get another deep and meaningful explanation. Here is a link straight to the data library, so you can get your claws on a bunch of that premium freshly cooked market data.
@@ -82,5 +129,5 @@ Markets are noisy, we can't effectively determine "which price is the right one"
 This is also quite revealing. 
 
 
-
+""
 
