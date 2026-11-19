@@ -24,7 +24,7 @@ It is the greatest because it encompasses all the others. It is the dance of sup
 
 ---
 
-## So what the fuf is algorithmic trading?
+## So what is algorithmic trading?
 
 I must bow to my own stupidity. That was a passionate, inspirational letter about something I never explained.
 
