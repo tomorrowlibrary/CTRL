@@ -1,3 +1,9 @@
+"""
+
+<img width="1638" height="433" alt="image" src="https://github.com/user-attachments/assets/310d22ce-3e24-47d5-86bc-e895639f69c2" />
+I want to only call this tab "data".
+
+"""
 If you came here straight after the introduction, welcome. If you skipped ahead to the alphas first, you did exactly what I expected and hoped you wouldn't. Why? Because data is your bedrock. It is the most important piece of any quant or algorithmic pipeline: you build your ideas from it, and you trade on it.
 
 ## Start with what you can trade
@@ -142,3 +148,13 @@ For IMC Prosperity, backtesting and analysis, I will share the order book data a
 <!-- ctrl:link https://docs.tardis.dev/downloadable-csv-files | Tardis.dev datasets | Tick-level trades and order books. The first day of every month is free. -->
 
 The trades and book snapshots on this page are the free Tardis.dev files for {{data:day}}, and the minute bars come from Binance. Every number and chart on this page is produced by `ctrl_data_showcase.py`, so you can rerun it on any other day.
+
+
+"""
+We now need to add the datasets setup and structuring of the different notebooks for loading in data and such.
+I imagine that those are divided in something like a table of tables, such that you first get some buttons with dropdown menus, 
+So you for example press "cryptocurrencies", which leads to a drop down menu on assets, than day-by-day or minute-by-minute or orderbook.
+Such that a student can press those and get the data they need for the different assets from say 2016 to now. 
+
+Similarly they can press "IMC" and press Prosperity 1, 2, 3, 4 and than get zip files with round 1, 2, 3, 4, 5. For each of those.
+"""
