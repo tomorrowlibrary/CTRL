@@ -21,7 +21,7 @@ For every idea, write: **what you observe → what you predict → how you trade
 
 ## How to read the list
 
-Each hypothesis includes a first experiment, the data required and a failure mode. Studies in the attached notes found several statistically interesting patterns but did **not** establish a general net-profitable live strategy.
+Each hypothesis includes a first experiment, the data required and a failure mode. Studies in my own notes found several statistically interesting patterns but did **not** establish a general net-profitable live strategy.
 
 ## Microstructure & liquidity
 
