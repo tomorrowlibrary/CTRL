@@ -1,3 +1,8 @@
+menu. - CTRL, Data, Alpha, Risk, Inventory, Execution, Research.
+
+
+
+
 # Ctrl+Alt+DefeatTheMarket
 
 **The unofficial guide to IMC's Prosperity challenge.**
