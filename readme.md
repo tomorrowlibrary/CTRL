@@ -49,19 +49,16 @@ First and foremost we are TRADERS. Then we are mathematicians, computer scientis
 ---
 
 ## The process: no storytelling, please!
-
-*I was recently told by my partner that I am a fucking storyteller, and that sometimes we just need a bloody summary rather than a story. So here is the summary. The stories are behind the links.*
-
-Algorithmic trading goes beyond stating "edge is buy low, sell high". It is about demonstrating, statistically, that an idea is real and gives you an advantage over the markets (read: every idiot under the sun trading with or against you). The work follows a pipeline:
+Algorithmic trading goes beyond stating "edge is buy low, sell high". It is about demonstrating, statistically, that an idea is real and gives you an advantage over the markets. The work follows a pipeline:
 
 - **Data.** Everything starts with what you can see: prices, order books, trade logs. I used to think denoising was the most boring thing in the world. Today I know it is the gold mine. [→ Data](https://tomorrowlibrary.github.io/CTRL/data/index.html)
-- **Alpha.** An idea that has edge, in three rough flavours: providing liquidity, exploiting inefficiencies (sometimes the market is simply filled with idiots), and following the inevitabilities that arrive without anyone's consent. [→ Alpha](https://tomorrowlibrary.github.io/CTRL/market-dynamics/index.html)
+- **Alpha.** An idea that has edge, in three rough flavours: providing liquidity, exploiting inefficiencies, and following the inevitabilities. [→ Alpha](https://tomorrowlibrary.github.io/CTRL/market-dynamics/index.html)
 - **Risk.** It helps you correct yourself and keeps you from losing money unnecessarily. Adverse events will happen! Regardless of what your professors have been trying to teach you. [→ Risk](https://tomorrowlibrary.github.io/CTRL/inventory-risk/index.html)
 - **Inventory.** Every trade leaves you holding something: what, how much and for how long, per asset and then as a portfolio. [→ Inventory](https://tomorrowlibrary.github.io/CTRL/inventory-risk/index.html)
 - **Execution.** Where the idea finally meets the order book. Every order leaves a footprint, and every trade costs something. [→ Execution](https://tomorrowlibrary.github.io/CTRL/execution-backtesting/index.html)
-- **Research.** How a scientific hypothesis becomes a trading idea. Do not use AIs for alpha hunting: beautiful and useful as they are, they have literally no f-ing clue. Use them to speed up EVERYTHING else. [→ Research](https://tomorrowlibrary.github.io/CTRL/research/index.html)
+- **Research.** How a scientific hypothesis becomes a trading idea. Do not use AIs for alpha hunting: beautiful and useful as they are, they have literally no clue. Use them to speed up EVERYTHING else. [→ Research](https://tomorrowlibrary.github.io/CTRL/research/index.html)
 
-I would guesstimate that alpha and a baseline implementation take you 75% of the way. If you would rather start from an existing idea, there is [a massive pile of alphas](https://tomorrowlibrary.github.io/CTRL/alphas/index.html) to search through and improve on.
+I would estimate that alpha and a baseline implementation take you 75% of the way. If you would rather start from an existing idea, there is [a massive pile of alphas](https://tomorrowlibrary.github.io/CTRL/alphas/index.html) to search through and improve on.
 
 ---
 
