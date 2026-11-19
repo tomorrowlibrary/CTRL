@@ -1,7 +1,16 @@
 menu. - CTRL, Data, Alpha, Risk, Inventory, Execution, Research.
 
+We want to drop this
+<img width="1821" height="799" alt="image" src="https://github.com/user-attachments/assets/79c9ecf4-67f1-4ddd-8c5b-1b5021ef142d" />
 
 
+We want to drop this
+<img width="613" height="593" alt="image" src="https://github.com/user-attachments/assets/603efc57-7b5e-4825-8a3e-bfc553308f81" />
+
+We want to improve on this and to make it our Hero, so newcommers know what they've stumbled on.
+<img width="1008" height="623" alt="image" src="https://github.com/user-attachments/assets/4d2a0d63-0edf-41ef-92a3-ae4cd06a8650" />
+
+""
 
 # Ctrl+Alt+DefeatTheMarket
 
@@ -92,3 +101,23 @@ I will not be participating much in Prosperity 5. Having scored to my own satisf
 ## Contact
 
 You can find my other works at [Tomorrow Capital Research](https://tomorrowcapitalresearch.github.io/), in the [Tomorrow Library](https://tomorrowlibrary.github.io/index.html) and on [GitHub](https://github.com/MarkBrezina). If you want to contact me, write to [tomorrowcapitalresearch@gmail.com](mailto:tomorrowcapitalresearch@gmail.com).
+
+""
+
+
+
+The rest of the stuff from the current website needs to merged into this script somehow.
+<img width="1106" height="772" alt="image" src="https://github.com/user-attachments/assets/feb22cc6-f413-4202-9661-919ff9249075" />
+
+<img width="1068" height="511" alt="image" src="https://github.com/user-attachments/assets/256c21d3-8db7-40e7-99c8-672d2b3ede71" />
+
+<img width="1124" height="610" alt="image" src="https://github.com/user-attachments/assets/c5d063af-4418-466e-a389-884d4f86c21e" />
+
+<img width="1109" height="629" alt="image" src="https://github.com/user-attachments/assets/3352a5b1-2676-41eb-9b24-ad0cde1d8ee4" />
+
+<img width="1089" height="656" alt="image" src="https://github.com/user-attachments/assets/bac8d1f1-feed-42dd-9373-d394f8f92595" />
+
+
+
+
+
